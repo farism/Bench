@@ -1,0 +1,9 @@
+FileVersion = 1
+Dependencies = {corlib = "*", Bench = "*"}
+
+[Project]
+Name = "Example"
+StartupObject = "Example.Program"
+
+[Configs.Release.Win64]
+OptimizationLevel = "O3"

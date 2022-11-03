@@ -1,0 +1,41 @@
+FileVersion = 1
+Projects = {Bench = {Path = "."}, Example = {Path = "Example"}}
+
+[Workspace]
+StartupProject = "Example"
+
+[Configs.Debug.Win64]
+ConfigSelections = {Example = {Config = "Release"}}
+
+[Configs.Test.Win64]
+ConfigSelections = {Example = {Config = "Release"}}
+
+[Configs.Bench.Win32]
+Toolset = "LLVM"
+BfOptimizationLevel = "O2"
+LTOType = "Thin"
+AllocType = "CRT"
+RuntimeChecks = false
+EmitDynamicCastCheck = false
+EnableObjectDebugFlags = false
+EmitObjectAccessCheck = false
+EnableRealtimeLeakCheck = false
+AllowHotSwapping = false
+IncrementalBuild = false
+COptimizationLevel = "O2"
+ConfigSelections = {Bench = {Config = "Release"}, corlib = {Config = "Release"}, Example = {Config = "Release"}}
+
+[Configs.Bench.Win64]
+Toolset = "LLVM"
+BfOptimizationLevel = "O2"
+LTOType = "Thin"
+AllocType = "CRT"
+RuntimeChecks = false
+EmitDynamicCastCheck = false
+EnableObjectDebugFlags = false
+EmitObjectAccessCheck = false
+EnableRealtimeLeakCheck = false
+AllowHotSwapping = false
+IncrementalBuild = false
+COptimizationLevel = "O2"
+ConfigSelections = {Bench = {Config = "Test"}, corlib = {Config = "Release"}, Example = {Config = "Release"}}

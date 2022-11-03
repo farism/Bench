@@ -1,0 +1,9 @@
+FileVersion = 1
+
+[Project]
+Name = "Bench"
+TargetType = "BeefLib"
+StartupObject = "Bench.Program"
+
+[Configs.Test.Win64]
+OptimizationLevel = "O3"
